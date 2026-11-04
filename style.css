@@ -145,7 +145,7 @@ nav.scrolled {
   line-height: 1;
   animation: fadeUp 1s ease 0.4s both;
 }
-.hero h1 span { color: #2ecc71; } /* TEMP test – originally var(--gold) */
+.hero h1 span { color: var(--gold); }
 .hero p {
   margin-top: 16px;
   font-size: 13px;
