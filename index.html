@@ -35,11 +35,31 @@
     <img class="hero-logo" src="images/logo.png" alt="Kupenov Auto">
     <h1>KUPENOV <span>AUTO</span></h1>
     <p>Driven by excellence</p>
-    <div class="hero-scroll">scroll</div>
+    <div class="hero-scroll" data-i18n>Натисни</div>
   </section>
 
+  <!-- SECTION NAV -->
+  <div class="section-nav" id="sections">
+    <a class="section-nav-btn" href="#stock">
+      <span class="section-nav-icon"><img src="images/nav/stock.png" alt=""></span>
+      <span class="section-nav-title">Автомобили на склад</span>
+    </a>
+    <a class="section-nav-btn" href="#locksmith">
+      <span class="section-nav-icon"><img src="images/nav/locksmith.png" alt=""></span>
+      <span class="section-nav-title">Автомобилен ключар 24/7</span>
+    </a>
+    <a class="section-nav-btn" href="#services">
+      <span class="section-nav-icon"><img src="images/nav/services.png" alt=""></span>
+      <span class="section-nav-title">Услуги в автомобилния бранш</span>
+    </a>
+    <a class="section-nav-btn" href="#brand">
+      <span class="section-nav-icon"><img src="images/nav/brand.png" alt=""></span>
+      <span class="section-nav-title">Брандови продукти</span>
+    </a>
+  </div>
+
   <!-- DIVIDER -->
-  <div class="divider"><span>Налични автомобили</span></div>
+  <div class="divider" id="stock"><span>Автомобили на склад</span></div>
 
   <!-- FILTER -->
   <div class="car-filter">
@@ -75,14 +95,14 @@
   <section class="cars-section">
     <div class="cars-grid">
 
-      <div class="car-card" data-class="everyday" data-price="9500" data-year="200711" onclick="window.location.href='bmw-530d.html'" style="cursor:pointer;">
+      <div class="car-card" data-class="everyday" data-price="9000" data-year="200711" onclick="window.location.href='bmw-530d.html'" style="cursor:pointer;">
         <div class="car-img-wrap">
           <img src="images/bmw_530d/1.jpg" alt="BMW 530d Touring">
         </div>
         <div class="car-info">
           <div class="car-info-main">
             <h2>BMW 530d</h2>
-            <div class="car-price">9 500 EUR</div>
+            <div class="car-price">9 000 EUR</div>
           </div>
           <div class="car-tags">
             <span class="tag-available">Налично</span>
@@ -156,14 +176,14 @@
         </div>
       </div>
 
-      <div class="car-card" data-class="everyday" data-price="26000" data-year="202402" onclick="window.location.href='bmw-318d.html'" style="cursor:pointer;">
+      <div class="car-card" data-class="everyday" data-price="24500" data-year="202402" onclick="window.location.href='bmw-318d.html'" style="cursor:pointer;">
         <div class="car-img-wrap">
           <img src="images/bmw_318d/1.jpg" alt="BMW 318d Touring">
         </div>
         <div class="car-info">
           <div class="car-info-main">
             <h2>BMW 318d</h2>
-            <div class="car-price">26 000 EUR</div>
+            <div class="car-price">24 500 EUR</div>
           </div>
           <div class="car-tags">
             <span class="tag-available">Налично</span>
@@ -189,14 +209,14 @@
         </div>
       </div>
 
-      <div class="car-card" data-class="sport" data-price="26000" data-year="201801" onclick="window.location.href='audi-a5.html'" style="cursor:pointer;">
+      <div class="car-card" data-class="sport" data-price="25000" data-year="201801" onclick="window.location.href='audi-a5.html'" style="cursor:pointer;">
         <div class="car-img-wrap">
           <img src="images/audi_a5/1.jpg" alt="Audi A5">
         </div>
         <div class="car-info">
           <div class="car-info-main">
             <h2>Audi A5</h2>
-            <div class="car-price">26 000 EUR</div>
+            <div class="car-price">25 000 EUR</div>
           </div>
           <div class="car-tags">
             <span class="tag-available">Налично</span>
@@ -224,29 +244,41 @@
     </div>
   </section>
 
+  <!-- LOCKSMITH -->
+  <div class="divider" id="locksmith"><span>Автомобилен ключар 24/7</span></div>
+  <section class="locksmith-section">
+    <div class="locksmith-card">
+      <div class="locksmith-icon"><img src="images/nav/locksmith.png" alt=""></div>
+      <div class="locksmith-actions">
+        <button class="contact-cta" onclick="openService(4)">Информация за услугата</button>
+        <button class="contact-cta" onclick="openContactModal()">Свържи се</button>
+      </div>
+    </div>
+  </section>
+
   <!-- SERVICES -->
-  <div class="divider"><span>Услуги</span></div>
+  <div class="divider" id="services"><span>Услуги в автомобилния бранш</span></div>
   <section class="services-section">
     <div class="services-grid">
 
       <button class="service-btn" onclick="openService(0)">
         <span class="service-icon"><img src="images/services/import.png" alt=""></span>
-        <span class="service-title">Внос на автомобил по поръчка</span>
+        <span class="service-title">Внос от чужбина по запитване</span>
       </button>
 
       <button class="service-btn" onclick="openService(1)">
-        <span class="service-icon"><img src="images/services/buyback.png" alt=""></span>
-        <span class="service-title">Изкупуване на стария Ви автомобил</span>
+        <span class="service-icon"><img src="images/services/service.png" alt=""></span>
+        <span class="service-title">Доверен сервиз и резервни части</span>
       </button>
 
       <button class="service-btn" onclick="openService(2)">
-        <span class="service-icon"><img src="images/services/kat.png" alt=""></span>
-        <span class="service-title">Съдействие в КАТ</span>
+        <span class="service-icon"><img src="images/services/insurance.png" alt=""></span>
+        <span class="service-title">Застрахователен брокер</span>
       </button>
 
       <button class="service-btn" onclick="openService(3)">
-        <span class="service-icon"><img src="images/services/search.png" alt=""></span>
-        <span class="service-title">Съдействие при намиране на автомобил</span>
+        <span class="service-icon"><img src="images/services/kat.png" alt=""></span>
+        <span class="service-title">Регистрация в КАТ</span>
       </button>
 
     </div>
@@ -263,8 +295,32 @@
     </div>
   </div>
 
+  <!-- CONTACT MODAL -->
+  <div class="service-modal-overlay" id="contactModal" onclick="if(event.target===this)closeContactModal()">
+    <div class="service-modal">
+      <span class="service-modal-close" onclick="closeContactModal()">✕</span>
+      <h3 class="service-modal-title">Свържете се</h3>
+      <div class="service-modal-rule"></div>
+      <p class="service-modal-text" style="margin-bottom:26px;">За оглед, въпроси или допълнителна информация — свържете се с нас.</p>
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <a href="tel:+359889017810" class="contact-row" style="text-decoration:none; display:flex; align-items:center; gap:14px; padding:16px 20px; border:1px solid var(--border); transition:border-color 0.2s; cursor:pointer;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+          <span style="color:var(--white); font-size:15px; letter-spacing:0.04em;">+359 88 901 7810</span>
+        </a>
+        <div class="contact-row" onclick="copyMail(this)" style="display:flex; align-items:center; gap:14px; padding:16px 20px; border:1px solid var(--border); transition:border-color 0.2s; cursor:pointer;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span style="color:var(--white); font-size:15px; letter-spacing:0.04em;">lachezar.kupenov@gmail.com</span>
+        </div>
+        <a href="https://www.instagram.com/kupenov.v?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="contact-row" style="text-decoration:none; display:flex; align-items:center; gap:14px; padding:16px 20px; border:1px solid var(--border); transition:border-color 0.2s; cursor:pointer;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="var(--gold)"/></svg>
+          <span style="color:var(--white); font-size:15px; letter-spacing:0.04em;">Instagram</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!-- MERCH -->
-  <div class="divider"><span>Мърч</span></div>
+  <div class="divider" id="brand"><span>Брандови продукти</span></div>
   <section class="cars-section">
     <div class="cars-grid">
       <div class="car-card" onclick="window.location.href='merch.html'" style="cursor:pointer;">
@@ -300,7 +356,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="contact-section">
+  <section class="contact-section" id="contact">
     <div class="contact-left">
       <h2 data-i18n-html="contact-title">Свържете се<br>с <span>нас</span></h2>
       <p data-i18n-html="contact-sub">За въпроси, огледи или допълнителна информация — не се колебайте да се свържете с нас.</p>
@@ -432,8 +488,8 @@
       const svc = (window.KA && window.KA.services) ? window.KA.services[i] : null;
       if (!svc) return;
       const lang = window.KA_LANG || 'bg';
-      const icons = ['import', 'buyback', 'kat', 'search'];
-      document.getElementById('serviceModalIcon').innerHTML = '<img src="images/services/' + icons[i] + '.png" alt="">';
+      const icons = ['services/import', 'services/service', 'services/insurance', 'services/kat', 'nav/locksmith'];
+      document.getElementById('serviceModalIcon').innerHTML = '<img src="images/' + icons[i] + '.png" alt="">';
       document.getElementById('serviceModalTitle').textContent = svc.title[lang] || svc.title.bg;
       document.getElementById('serviceModalText').textContent = svc.text[lang] || svc.text.bg;
       document.getElementById('serviceModal').classList.add('open');
@@ -443,7 +499,39 @@
       document.getElementById('serviceModal').classList.remove('open');
       document.body.style.overflow = '';
     }
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeService(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeService(); closeContactModal(); } });
+    function openContactModal() { document.getElementById('contactModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeContactModal() { document.getElementById('contactModal').classList.remove('open'); document.body.style.overflow = ''; }
+    // Fast animated scrolling inside the home page (nav logo, hero, section buttons)
+    (function () {
+      let raf = 0;
+      function stop() { cancelAnimationFrame(raf); }
+      function smoothTo(y) {
+        stop();
+        const start = window.scrollY;
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const dist = Math.max(0, Math.min(y, max)) - start;
+        if (!dist) return;
+        const dur = Math.min(750, 350 + Math.abs(dist) / 8);
+        const t0 = performance.now();
+        (function step(t) {
+          const p = Math.min(1, (t - t0) / dur);
+          const e = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
+          window.scrollTo({ top: start + dist * e, behavior: 'instant' });
+          if (p < 1) raf = requestAnimationFrame(step);
+        })(t0);
+      }
+      function toEl(el) { smoothTo(el.getBoundingClientRect().top + window.scrollY - 110); }
+      ['wheel', 'touchstart', 'keydown'].forEach(ev => window.addEventListener(ev, stop, { passive: true }));
+      document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+        const el = document.getElementById(a.getAttribute('href').slice(1));
+        if (!el) return;
+        e.preventDefault();
+        toEl(el);
+      }));
+      document.querySelector('.nav-logo').addEventListener('click', () => smoothTo(0));
+      document.querySelector('.hero').addEventListener('click', () => toEl(document.getElementById('sections')));
+    })();
     function copyMail(el) {
       navigator.clipboard.writeText('lachezar.kupenov@gmail.com').then(() => {
         const span = el.querySelector('span:last-child');

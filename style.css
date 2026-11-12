@@ -34,7 +34,8 @@ nav.scrolled {
   background: rgba(10,10,10,0.97);
   border-bottom: 1px solid var(--border);
 }
-.nav-logo img { height: 48px; object-fit: contain; }
+.nav-logo { cursor: pointer; }
+.nav-logo img { height: 48px; object-fit: contain; display: block; }
 .nav-contact {
   display: flex;
   flex-direction: column;
@@ -117,6 +118,7 @@ nav.scrolled {
   text-align: center;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .hero::before {
   content: '';
@@ -182,6 +184,74 @@ nav.scrolled {
   animation: scrollLine 1.5s ease-in-out infinite;
 }
 
+/* ── SECTION NAV ── */
+.section-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  padding: 0 60px;
+  scroll-margin-top: 110px;
+}
+.section-nav-btn {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 36px 18px;
+  background: #141414;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  text-decoration: none;
+  text-align: center;
+  transition: transform 0.25s, background 0.25s, box-shadow 0.3s;
+}
+.section-nav-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 0 0, rgba(201,168,76,0.2) 0%, transparent 55%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+/* hover only where a real pointer exists, so it does not stick after a tap on phones */
+@media (hover: hover) {
+  .section-nav-btn:hover {
+    transform: translateY(-4px);
+    background: #181818;
+    box-shadow: -8px -8px 24px -12px rgba(201,168,76,0.12);
+  }
+  .section-nav-btn:hover::before { opacity: 1; }
+}
+.section-nav-btn { -webkit-tap-highlight-color: transparent; }
+.section-nav-icon { position: relative; }
+.section-nav-icon img { height: 84px; width: auto; max-width: 100%; display: block; }
+.section-nav-title {
+  position: relative;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+}
+.divider[id], .contact-section[id] { scroll-margin-top: 110px; }
+
+/* ── LOCKSMITH ── */
+.locksmith-section { padding: 0 60px 100px; }
+.locksmith-card {
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
+}
+.locksmith-icon img { height: 150px; width: auto; display: block; }
+.locksmith-actions { display: flex; flex-direction: column; gap: 14px; }
+.locksmith-actions .contact-cta { align-self: stretch; min-width: 300px; text-align: center; padding: 16px 28px; }
+
 /* ── DIVIDER ── */
 .divider {
   display: flex;
@@ -201,6 +271,7 @@ nav.scrolled {
   font-size: 22px;
   color: var(--gold);
   letter-spacing: 0.15em;
+  text-align: center;
 }
 
 /* ── CARS ── */
@@ -370,6 +441,7 @@ nav.scrolled {
   font-family: 'Jost', sans-serif;
   font-size: 12px;
   letter-spacing: 0.15em;
+  text-align: center;
   text-transform: uppercase;
   padding: 13px 18px;
   cursor: pointer;
@@ -497,13 +569,13 @@ footer p { font-size: 12px; color: var(--grey); letter-spacing: 0.08em; }
 .service-btn {
   background: #141414;
   border: 1px solid var(--border);
-  padding: 36px 18px;
+  padding: 28px 22px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   gap: 18px;
   cursor: pointer;
-  text-align: center;
+  text-align: left;
   font-family: 'Jost', sans-serif;
   transition: border-color 0.25s, transform 0.25s, background 0.25s;
 }
@@ -513,7 +585,8 @@ footer p { font-size: 12px; color: var(--grey); letter-spacing: 0.08em; }
   background: #181818;
 }
 .service-icon svg { width: 42px; height: 42px; }
-.service-icon img { width: 54px; height: 54px; object-fit: contain; display: block; }
+.service-icon { flex-shrink: 0; width: 84px; height: 56px; }
+.service-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .service-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: 18px;
@@ -596,6 +669,7 @@ footer p { font-size: 12px; color: var(--grey); letter-spacing: 0.08em; }
   font-size: 14px;
   color: #aaa;
   line-height: 1.85;
+  white-space: pre-line;
 }
 
 /* ── MERCH ── */
@@ -696,17 +770,31 @@ footer p { font-size: 12px; color: var(--grey); letter-spacing: 0.08em; }
 }
 
 /* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 768px) {
   nav { padding: 16px 24px; }
-  .divider { padding: 0 24px; }
+  .divider { padding: 0 16px; gap: 12px; }
+  .divider::before, .divider::after { min-width: 22px; }
+  .divider span { font-size: 20px; letter-spacing: 0.1em; }
+  .section-nav { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 0 16px; }
+  .section-nav-btn { padding: 28px 12px; gap: 14px; }
+  .section-nav-icon img { height: 64px; }
+  .section-nav-title { font-size: 17px; }
+  .locksmith-section { padding: 0 16px 80px; }
   .car-filter { padding: 0 16px; }
   .filter-dropdown { width: 100%; }
   .filter-dropdown-btn { width: 100%; min-width: 0; }
   .cars-section { padding: 0 16px 80px; }
   .cars-grid { grid-template-columns: 1fr; }
   .services-section { padding: 0 16px 80px; }
-  .services-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .service-btn { padding: 28px 14px; gap: 14px; }
+  .services-grid { grid-template-columns: 1fr; gap: 10px; }
+  .service-btn { padding: 22px 18px; gap: 16px; }
+  .locksmith-card { flex-direction: column; gap: 32px; padding: 0 20px; }
+  .locksmith-icon img { height: 120px; }
+  .locksmith-actions { width: 100%; }
+  .locksmith-actions .contact-cta { min-width: 0; }
   .service-title { font-size: 16px; }
   .merch-section { padding: 0 16px 80px; }
   .merch-grid { grid-template-columns: 1fr; gap: 28px; }

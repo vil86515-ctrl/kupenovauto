@@ -19,6 +19,16 @@
     /* chrome / dividers / chips */
     'Налични автомобили': { ru: 'Доступные автомобили', en: 'Available Vehicles' },
     'Услуги': { ru: 'Услуги', en: 'Services' },
+    'Натисни': { ru: 'Нажмите', en: 'Click' },
+    'Информация за услугата': { ru: 'Информация об услуге', en: 'About the service' },
+    'Внос от чужбина по запитване': { ru: 'Импорт из-за рубежа по запросу', en: 'Import from abroad on request' },
+    'Доверен сервиз и резервни части': { ru: 'Проверенный сервис и запчасти', en: 'Trusted service and spare parts' },
+    'Застрахователен брокер': { ru: 'Страховой брокер', en: 'Insurance broker' },
+    'Регистрация в КАТ': { ru: 'Регистрация в КАТ', en: 'Vehicle registration (KAT)' },
+    'Автомобили на склад': { ru: 'Автомобили в наличии', en: 'Cars in Stock' },
+    'Автомобилен ключар 24/7': { ru: 'Автомобильный ключник 24/7', en: 'Car Locksmith 24/7' },
+    'Услуги в автомобилния бранш': { ru: 'Автомобильные услуги', en: 'Automotive Services' },
+    'Брандови продукти': { ru: 'Брендовая продукция', en: 'Branded Products' },
     'Мърч': { ru: 'Мерч', en: 'Merch' },
     'Технически характеристики': { ru: 'Технические характеристики', en: 'Technical Specifications' },
     'Налично': { ru: 'В наличии', en: 'Available' },
@@ -178,35 +188,43 @@
 
   const SERVICES = [
     {
-      title: { bg: 'Внос на автомобил по поръчка', ru: 'Импорт автомобиля под заказ', en: 'Custom vehicle import' },
+      title: { bg: 'Внос от чужбина по запитване', ru: 'Импорт из-за рубежа по запросу', en: 'Import from abroad on request' },
       text: {
-        bg: 'Предлагаме цялостно съдействие при внос на автомобили по поръчка, съобразено с Вашите изисквания за марка, година на производство, пробег, бюджет и оборудване. Работим с наши доказани партньори по цял свят и внасяме автомобили от Южна Корея, цяла Европа, САЩ и Канада. Извършваме предварителна проверка на всеки автомобил, анализ на неговата история и състояние. Организираме процеса по транспортиране до България. Нашата цел е да получите автомобил с доказан произход, реално състояние и максимално добра стойност според Вашия бюджет.',
-        ru: 'Мы предлагаем полный комплекс услуг по индивидуальному подбору и импорту автомобилей в соответствии с Вашими требованиями к марке, году выпуска, пробегу, бюджету и комплектации. Мы сотрудничаем с проверенными партнёрами по всему миру и импортируем автомобили из Южной Кореи, стран Европы, США и Канады. Перед покупкой каждый автомобиль проходит тщательную проверку, включая анализ его истории и технического состояния. Мы также организуем весь процесс доставки автомобиля в Болгарию. Наша цель — предоставить Вам автомобиль с подтверждённым происхождением, реальным техническим состоянием и максимально выгодным соотношением цены и качества в рамках Вашего бюджета.',
-        en: 'We offer comprehensive assistance with custom vehicle imports, tailored to your requirements regarding make, model year, mileage, budget, and equipment. We work with trusted partners worldwide and import vehicles from South Korea, across Europe, the United States, and Canada. Every vehicle undergoes a thorough pre-purchase inspection, including a detailed review of its history and overall condition. We also organize the entire transportation process to Bulgaria. Our goal is to provide you with a vehicle of verified origin, genuine condition, and the best possible value within your budget.'
+        bg: 'Намираме и доставяме автомобил от чужбина според Вашите изисквания и бюджет.\nДоставката отнема до 45 дни. Работим с партньори за Европа, САЩ, Канада, Южна Корея.',
+        ru: 'Находим и доставляем автомобиль из-за рубежа в соответствии с Вашими требованиями и бюджетом.\nДоставка занимает до 45 дней. Работаем с партнёрами в Европе, США, Канаде и Южной Корее.',
+        en: 'We find and deliver a vehicle from abroad to match your requirements and budget.\nDelivery takes up to 45 days. We work with partners for Europe, the USA, Canada and South Korea.'
       }
     },
     {
-      title: { bg: 'Изкупуване на стария Ви автомобил', ru: 'Выкуп вашего автомобиля', en: 'Buying your old vehicle' },
+      title: { bg: 'Доверен сервиз и резервни части', ru: 'Проверенный сервис и запчасти', en: 'Trusted service and spare parts' },
       text: {
-        bg: 'Ако желаете да продадете настоящия си автомобил, предлагаме бърза и коректна оценка според неговото състояние, година, пробег, пазарна стойност и технически характеристики. Изкупуването може да бъде извършено като отделна сделка или като част от покупката на нов автомобил. Осигуряваме удобен процес, ясни условия и спестяване на време при търсенето на купувач.',
-        ru: 'Если Вы хотите продать свой текущий автомобиль, мы предлагаем быструю и объективную оценку с учётом его технического состояния, года выпуска, пробега, рыночной стоимости и технических характеристик. Мы можем выкупить Ваш автомобиль как в рамках отдельной сделки, так и в рамках покупки нового автомобиля. Мы обеспечиваем удобный процесс, прозрачные условия и экономим Ваше время, избавляя Вас от необходимости самостоятельно искать покупателя.',
-        en: 'If you wish to sell your current vehicle, we offer a fast and fair appraisal based on its condition, model year, mileage, market value, and technical specifications. We can purchase your vehicle either as a separate transaction or as part of the purchase of your next vehicle. We provide a convenient process, transparent terms, and save you the time and effort of finding a buyer on your own.'
+        bg: 'Осигуряваме професионално обслужване за всички видове ремонти по един автомобил в доверен сервиз.\nНамираме подходящите резервни части на най-добрите пазарни цени.',
+        ru: 'Обеспечиваем профессиональное обслуживание и все виды ремонта автомобиля в проверенном сервисе.\nНаходим подходящие запчасти по лучшим рыночным ценам.',
+        en: 'We provide professional servicing for all types of vehicle repairs at a trusted workshop.\nWe source the right spare parts at the best market prices.'
       }
     },
     {
-      title: { bg: 'Съдействие в КАТ', ru: 'Помощь в регистрации (КАТ)', en: 'Vehicle registration assistance' },
+      title: { bg: 'Застрахователен брокер', ru: 'Страховой брокер', en: 'Insurance broker' },
       text: {
-        bg: 'Оказваме съдействие при административните процедури, свързани с регистрация, пререгистрация, смяна на собственост, издаване на регистрационни табели и подготовка на необходимите документи. Целта е да улесним процеса и да Ви спестим време, като Ви насочим през всички необходими стъпки за коректно и спокойно приключване на регистрацията.',
-        ru: 'Мы оказываем содействие при прохождении всех административных процедур, связанных с регистрацией, перерегистрацией, переоформлением права собственности, получением регистрационных номерных знаков и подготовкой необходимых документов. Наша цель — максимально упростить процесс, сэкономить Ваше время и сопровождать Вас на каждом этапе, обеспечивая правильное и спокойное оформление регистрации автомобиля.',
-        en: 'We provide assistance with all administrative procedures related to vehicle registration, re-registration, ownership transfer, license plate issuance, and the preparation of the required documentation. Our goal is to simplify the entire process, save you valuable time, and guide you through every necessary step to ensure a smooth, accurate, and hassle-free vehicle registration experience.'
+        bg: 'Съдействаме при сключването на подходяща автомобилна застраховка с доверен брокер.',
+        ru: 'Помогаем оформить подходящую автомобильную страховку через проверенного брокера.',
+        en: 'We help you arrange suitable car insurance through a trusted broker.'
       }
     },
     {
-      title: { bg: 'Съдействие при намиране на автомобил', ru: 'Помощь в подборе автомобиля', en: 'Vehicle search assistance' },
+      title: { bg: 'Регистрация в КАТ', ru: 'Регистрация в КАТ', en: 'Vehicle registration (KAT)' },
       text: {
-        bg: 'Помагаме Ви да откриете автомобил, който отговаря на Вашите нужди, предпочитания и бюджет. Анализираме пазара, сравняваме оферти, проверяваме историята и състоянието на избрани автомобили и Ви консултираме при вземането на решение. Независимо дали търсите семеен автомобил, градска кола, SUV, бизнес автомобил или лекотоварен модел, съдействаме за намиране на подходящо и сигурно решение.',
-        ru: 'Мы помогаем Вам подобрать автомобиль, который полностью соответствует Вашим потребностям, предпочтениям и бюджету. Мы анализируем рынок, сравниваем предложения, проверяем историю и техническое состояние выбранных автомобилей, а также консультируем Вас на каждом этапе принятия решения. Независимо от того, ищете ли Вы семейный автомобиль, городской автомобиль, внедорожник, автомобиль бизнес-класса или лёгкий коммерческий транспорт, мы поможем найти наиболее подходящее и надёжное решение.',
-        en: 'We help you find a vehicle that perfectly matches your needs, preferences, and budget. We analyze the market, compare available offers, verify the history and condition of selected vehicles, and provide expert guidance throughout the decision-making process. Whether you are looking for a family car, a city vehicle, an SUV, a business vehicle, or a light commercial vehicle, we are committed to finding the right and reliable solution for you.'
+        bg: 'Поемаме изцяло процеса по регистрацията на Вашия автомобил, чрез доверен регистратор.',
+        ru: 'Полностью берём на себя процесс регистрации Вашего автомобиля через проверенного регистратора.',
+        en: 'We take care of the entire registration process for your vehicle through a trusted registration agent.'
+      }
+    },
+    {
+      title: { bg: 'Автомобилен ключар 24/7', ru: 'Автомобильный ключник 24/7', en: 'Car Locksmith 24/7' },
+      text: {
+        bg: '• Дубликат на автомобилен ключ\n• Дубликат на битов ключ и чип за достъп\n• Ремонт на автомобилен ключ\n• Намиране на резервни компоненти\n• Идваме на място — на посочен от Вас адрес\n• На разположение денонощно, 7 дни в седмицата',
+        ru: '• Дубликат автомобильного ключа\n• Дубликат бытового ключа и чипа доступа\n• Ремонт автомобильного ключа\n• Поиск запасных компонентов\n• Выезд на место — по указанному Вами адресу\n• Работаем круглосуточно, 7 дней в неделю',
+        en: '• Car key duplication\n• House key and access chip duplication\n• Car key repair\n• Sourcing replacement components\n• On-site service at an address of your choice\n• Available around the clock, 7 days a week'
       }
     }
   ];
@@ -238,6 +256,7 @@
     '.tag-available',
     '.tag-class',
     '.service-title',
+    '.section-nav-title',
     '.back-link',
     '.contact-cta',
     '.filter-btn-pre',

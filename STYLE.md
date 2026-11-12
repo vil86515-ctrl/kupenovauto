@@ -63,7 +63,7 @@ Body по подразбиране: `Jost`, `font-weight: 300`, цвят `--whit
 | Toggle спек. таблица | 13px | — | Jost |
 | Секция-лейбъл (UPPERCASE) | 10–11px | 0.25–0.3em | Jost, UPPERCASE, злато |
 | Body / описания | 14–15px | — | Jost 300, line-height 1.7–1.85 |
-| Под-лейбъл hero („scroll") | 11px | 0.3em | Jost, UPPERCASE, `--grey` |
+| Под-лейбъл hero („Натисни") | 11px | 0.3em | Jost, UPPERCASE, `--grey` |
 
 Правило: **UPPERCASE + широк tracking (0.2–0.35em)** за малки лейбъли и бутони;
 широки заглавия със serif и tracking 0.05–0.15em.
@@ -77,7 +77,8 @@ Body по подразбиране: `Jost`, `font-weight: 300`, цвят `--whit
 | `.contact-cta` | Основен CTA („Свържи се") | прозрачен фон, `1px solid --gold`, текст злато, `16px 44px`, 13px UPPERCASE 0.2em, Jost | фон `--gold`, текст `--black` |
 | `.merch-cta` | Вторичен CTA | като `.contact-cta`, но `14px 32px`, 12px | фон `--gold`, текст `--black` |
 | `.table-toggle` | Разгъване спекове | `1px solid --border`, бял текст, 100% ширина, 12px UPPERCASE 0.2em | златна рамка+текст; `.open` = фон `rgba(201,168,76,0.08)` |
-| `.service-btn` | Карта-бутон (услуга) | фон `#141414`, `1px --border`, колона (иконка+текст), центрирано | златна рамка, `translateY(-4px)`, фон `#181818` |
+| `.service-btn` | Карта-бутон (услуга) | фон `#141414`, `1px --border`, ред (иконка вляво + текст вдясно) | златна рамка, `translateY(-4px)`, фон `#181818` |
+| `.section-nav-btn` | Навигация към секция (под hero) | фон `#141414`, `1px solid --gold`, златен текст Cormorant 20px, иконка `images/nav/*.png` 84px отгоре; grid 4 колони → 2 (≤768px) | `translateY(-4px)`, фон `#181818`, лек златен отблясък в горния ляв ъгъл (radial-gradient 0.2) |
 | `.service-modal-close` | „✕" затваряне | `--grey`, 22px, абсолютно горе-дясно | злато |
 
 Общ принцип за CTA: **outline → fill** при hover (златна рамка става златен фон, текст черен).
@@ -128,10 +129,12 @@ Body по подразбиране: `Jost`, `font-weight: 300`, цвят `--whit
 
 - Секции: `padding: 0 60px 100px` (десктоп) → `0 16px 80px` (≤768px).
 - `.divider` (заглавие между секции): марж `70px 0 50px`, падинг `0 60px`.
+- Ред на секциите в началната: hero → `.section-nav` (4 бутона) → Автомобили на склад (`#stock`) → Автомобилен ключар 24/7 (`#locksmith`) → Услуги в автомобилния бранш (`#services`) → Брандови продукти (`#brand`) → контакти (`#contact`). Котвите имат `scroll-margin-top: 110px` заради фиксираната навигация.
 - Nav: `position: fixed`, падинг `20px 60px`, градиентен фон; лого височина 48px;
   при скрол `nav.scrolled` — плътен фон + долна рамка.
 - Grid коли: `repeat(auto-fill, minmax(380px, 1fr))`, gap 24px → 1 колона (≤768px).
-- Grid услуги: 4 колони → 2 (≤768px) → 1 (≤460px), gap 14px.
+- Grid услуги: 4 колони → 2 (≤1100px) → 1 (≤768px), gap 14px. `.service-btn` е ред: иконка в кутия 84×56px (`object-fit: contain`) вляво, заглавие вдясно (ляво подравнено).
+- Ключар (`.locksmith-card`, без фон и рамка): иконка вляво, вдясно колона с два `.contact-cta` бутона („Информация за услугата" → service modal №4, „Свържи се" → contact modal); ≤768px → колона.
 - Footer: рамка отгоре, `24px 60px`, лого 32px (линк към `index.html`).
 
 ---
