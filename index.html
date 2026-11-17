@@ -66,12 +66,10 @@
     <div class="filter-dropdown" id="sortDropdown">
       <button class="filter-dropdown-btn" id="sortBtn" aria-haspopup="true" aria-expanded="false">
         <span class="filter-btn-pre">Подредба:</span>
-        <span id="sortBtnLabel">↓ Низходяща сума</span>
+        <span id="sortBtnLabel">По подразбиране</span>
         <span class="filter-caret" aria-hidden="true">▾</span>
       </button>
       <div class="filter-menu filter-menu--single" id="sortMenu" role="menu">
-        <button class="filter-option" data-sort="asc" role="menuitemradio">↑ Възходяща сума</button>
-        <button class="filter-option active" data-sort="desc" role="menuitemradio">↓ Низходяща сума</button>
         <button class="filter-option" data-sort="year-asc" role="menuitemradio">↑ Възходяща година</button>
         <button class="filter-option" data-sort="year-desc" role="menuitemradio">↓ Низходяща година</button>
       </div>
@@ -95,63 +93,13 @@
   <section class="cars-section">
     <div class="cars-grid">
 
-      <div class="car-card" data-class="everyday" data-price="9000" data-year="200711" onclick="window.location.href='bmw-530d.html'" style="cursor:pointer;">
-        <div class="car-img-wrap">
-          <img src="images/bmw_530d/1.jpg" alt="BMW 530d Touring">
-        </div>
-        <div class="car-info">
-          <div class="car-info-main">
-            <h2>BMW 530d</h2>
-            <div class="car-price">9 000 EUR</div>
-          </div>
-          <div class="car-tags">
-            <span class="tag-available">Налично</span>
-            <span class="tag-class">Ежедневен</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="car-card" data-class="everyday" data-price="1500" data-year="200212" onclick="window.location.href='opel-astra.html'" style="cursor:pointer;">
-        <div class="car-img-wrap">
-          <img src="images/opel_astra/1.jpg" alt="Opel Astra">
-        </div>
-        <div class="car-info">
-          <div class="car-info-main">
-            <h2>Opel Astra</h2>
-            <div class="car-price">1 500 EUR</div>
-          </div>
-          <div class="car-tags">
-            <span class="tag-available">Налично</span>
-            <span class="tag-class">Ежедневен</span>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="car-card" data-class="luxury" data-price="45000" data-year="202508" onclick="window.location.href='bmw-330d.html'" style="cursor:pointer;">
-        <div class="car-img-wrap">
-          <img src="images/bmw_330d/1.jpg" alt="BMW 330d xDrive">
-        </div>
-        <div class="car-info">
-          <div class="car-info-main">
-            <h2>BMW 330d</h2>
-            <div class="car-price">45 000 EUR</div>
-          </div>
-          <div class="car-tags">
-            <span class="tag-available">Налично</span>
-            <span class="tag-class">Луксозен</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="car-card" data-class="luxury" data-price="50000" data-year="202407" onclick="window.location.href='bmw-x2-m35i.html'" style="cursor:pointer;">
+      <div class="car-card" data-class="luxury" data-year="202407" onclick="window.location.href='bmw-x2-m35i.html'" style="cursor:pointer;">
         <div class="car-img-wrap">
           <img src="images/bmw_x2_m35i/1.jpg" alt="BMW X2 M35i">
         </div>
         <div class="car-info">
           <div class="car-info-main">
             <h2>BMW X2 M35i</h2>
-            <div class="car-price">50 000 EUR</div>
           </div>
           <div class="car-tags">
             <span class="tag-available">Налично</span>
@@ -160,14 +108,28 @@
         </div>
       </div>
 
-      <div class="car-card" data-class="luxury" data-price="38000" data-year="202207" onclick="window.location.href='bmw-330e.html'" style="cursor:pointer;">
+      <div class="car-card" data-class="luxury" data-year="202508" onclick="window.location.href='bmw-330d.html'" style="cursor:pointer;">
+        <div class="car-img-wrap">
+          <img src="images/bmw_330d/1.jpg" alt="BMW 330d xDrive">
+        </div>
+        <div class="car-info">
+          <div class="car-info-main">
+            <h2>BMW 330d</h2>
+          </div>
+          <div class="car-tags">
+            <span class="tag-available">Налично</span>
+            <span class="tag-class">Луксозен</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card" data-class="luxury" data-year="202207" onclick="window.location.href='bmw-330e.html'" style="cursor:pointer;">
         <div class="car-img-wrap">
           <img src="images/bmw_330e/1.jpg" alt="BMW 330e">
         </div>
         <div class="car-info">
           <div class="car-info-main">
             <h2>BMW 330e</h2>
-            <div class="car-price">38 000 EUR</div>
           </div>
           <div class="car-tags">
             <span class="tag-available">Налично</span>
@@ -176,47 +138,13 @@
         </div>
       </div>
 
-      <div class="car-card" data-class="everyday" data-price="24500" data-year="202402" onclick="window.location.href='bmw-318d.html'" style="cursor:pointer;">
-        <div class="car-img-wrap">
-          <img src="images/bmw_318d/1.jpg" alt="BMW 318d Touring">
-        </div>
-        <div class="car-info">
-          <div class="car-info-main">
-            <h2>BMW 318d</h2>
-            <div class="car-price">24 500 EUR</div>
-          </div>
-          <div class="car-tags">
-            <span class="tag-available">Налично</span>
-            <span class="tag-class">Ежедневен</span>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="car-card" data-class="everyday" data-price="6000" data-year="200901" onclick="window.location.href='bmw-325ix.html'" style="cursor:pointer;">
-        <div class="car-img-wrap">
-          <img src="images/bmw_e91/1.jpg" alt="BMW 325i Touring">
-        </div>
-        <div class="car-info">
-          <div class="car-info-main">
-            <h2>BMW 325iX</h2>
-            <div class="car-price">6 000 EUR</div>
-          </div>
-          <div class="car-tags">
-            <span class="tag-available">Налично</span>
-            <span class="tag-class">Ежедневен</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="car-card" data-class="sport" data-price="25000" data-year="201801" onclick="window.location.href='audi-a5.html'" style="cursor:pointer;">
+      <div class="car-card" data-class="sport" data-year="201801" onclick="window.location.href='audi-a5.html'" style="cursor:pointer;">
         <div class="car-img-wrap">
           <img src="images/audi_a5/1.jpg" alt="Audi A5">
         </div>
         <div class="car-info">
           <div class="car-info-main">
             <h2>Audi A5</h2>
-            <div class="car-price">25 000 EUR</div>
           </div>
           <div class="car-tags">
             <span class="tag-available">Налично</span>
@@ -225,14 +153,13 @@
         </div>
       </div>
 
-      <div class="car-card" data-class="everyday" data-price="6000" data-year="200602" onclick="window.location.href='audi-a6.html'" style="cursor:pointer;">
+      <div class="car-card" data-class="everyday" data-year="202402" onclick="window.location.href='bmw-318d.html'" style="cursor:pointer;">
         <div class="car-img-wrap">
-          <img src="images/audi_a6/1.jpg" alt="Audi A6 Allroad">
+          <img src="images/bmw_318d/1.jpg" alt="BMW 318d Touring">
         </div>
         <div class="car-info">
           <div class="car-info-main">
-            <h2>Audi A6 Allroad</h2>
-            <div class="car-price">6 000 EUR</div>
+            <h2>BMW 318d</h2>
           </div>
           <div class="car-tags">
             <span class="tag-available">Налично</span>
@@ -241,6 +168,65 @@
         </div>
       </div>
 
+      <div class="car-card" data-class="everyday" data-year="200711" onclick="window.location.href='bmw-530d.html'" style="cursor:pointer;">
+        <div class="car-img-wrap">
+          <img src="images/bmw_530d/1.jpg" alt="BMW 530d Touring">
+        </div>
+        <div class="car-info">
+          <div class="car-info-main">
+            <h2>BMW 530d</h2>
+          </div>
+          <div class="car-tags">
+            <span class="tag-available">Налично</span>
+            <span class="tag-class">Ежедневен</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card" data-class="everyday" data-year="200901" onclick="window.location.href='bmw-325ix.html'" style="cursor:pointer;">
+        <div class="car-img-wrap">
+          <img src="images/bmw_e91/1.jpg" alt="BMW 325i Touring">
+        </div>
+        <div class="car-info">
+          <div class="car-info-main">
+            <h2>BMW 325iX</h2>
+          </div>
+          <div class="car-tags">
+            <span class="tag-available">Налично</span>
+            <span class="tag-class">Ежедневен</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card" data-class="everyday" data-year="200602" onclick="window.location.href='audi-a6.html'" style="cursor:pointer;">
+        <div class="car-img-wrap">
+          <img src="images/audi_a6/1.jpg" alt="Audi A6 Allroad">
+        </div>
+        <div class="car-info">
+          <div class="car-info-main">
+            <h2>Audi A6 Allroad</h2>
+          </div>
+          <div class="car-tags">
+            <span class="tag-available">Налично</span>
+            <span class="tag-class">Ежедневен</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card" data-class="everyday" data-year="200212" onclick="window.location.href='opel-astra.html'" style="cursor:pointer;">
+        <div class="car-img-wrap">
+          <img src="images/opel_astra/1.jpg" alt="Opel Astra">
+        </div>
+        <div class="car-info">
+          <div class="car-info-main">
+            <h2>Opel Astra</h2>
+          </div>
+          <div class="car-tags">
+            <span class="tag-available">Налично</span>
+            <span class="tag-class">Ежедневен</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -454,9 +440,7 @@
 
       function applySort(mode) {
         const sorted = [...cards];
-        if (mode === 'desc') sorted.sort((a, b) => b.dataset.price - a.dataset.price);
-        else if (mode === 'asc') sorted.sort((a, b) => a.dataset.price - b.dataset.price);
-        else if (mode === 'year-desc') sorted.sort((a, b) => b.dataset.year - a.dataset.year);
+        if (mode === 'year-desc') sorted.sort((a, b) => b.dataset.year - a.dataset.year);
         else if (mode === 'year-asc') sorted.sort((a, b) => a.dataset.year - b.dataset.year);
         sorted.forEach(c => grid.appendChild(c));
       }
@@ -476,10 +460,9 @@
       document.addEventListener('ka:lang', () => {
         applyFilter();
         const act = document.querySelector('#sortMenu .filter-option.active');
-        if (act) sortLabel.textContent = act.textContent;
+        sortLabel.textContent = act ? act.textContent : window.KA.tr('По подразбиране');
       });
 
-      applySort('desc');
       applyFilter();
     })();
   </script>
